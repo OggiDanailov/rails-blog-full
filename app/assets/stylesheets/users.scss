@@ -1,0 +1,61 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.blog-list {
+	border: 3px solid;
+	border-radius: 15px;
+	padding: 10px;
+	width: 40%;
+	margin: 20px auto;
+}
+
+
+.current-user {
+	border: 2px solid black;
+	display: inline-block;
+	position: relative;
+	left: 700px;
+	padding: 10px;
+	border-radius: 20px;
+	list-style-type: none;
+	background-color: lightgreen;
+	box-shadow: 5px 5px 5px blue;
+}
+
+.user-name {
+	border: 2px solid black;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 20px;
+	list-style-type: none;
+	background-color: lightgreen;
+	box-shadow: 5px 5px 5px blue;
+}
+
+.current-user a {
+	text-decoration: none;
+}
+
+.edit-form{
+	margin-top: 20px;
+	
+}
+
+.comments {
+	border: 3px solid;
+	border-radius: 15px;
+	padding: 10px;
+	width: 40%;
+	margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+

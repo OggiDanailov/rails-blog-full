@@ -1,0 +1,17 @@
+<h1 style='text-align: center; margin-top: 60px'>Welcome to my Blogs!!!</h1>
+
+
+	<% @posts.each do |p| %>
+	<div class='index-posts'>
+		<div><b>Title:</b> <a href="/posts/<%=p.id %>"><%= p.title %></a></div>
+		<div><i>Content:</i> <%= p.content %></div>
+		<div><b>Author:</b> <%= p.user.email %></div>
+		<br>
+			<div class='index-comments'>
+				<% p.comments.limit(5).each_with_index do |c, index| %>
+					<div><%= index + 1 %>	Content: <%= c.content %></div>
+					<div>User: <%= c.user.email %></div>
+				<% end %>
+			</div>
+	</div>
+	<% end %>

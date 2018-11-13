@@ -1,0 +1,20 @@
+<h3>Profile Page</h3>
+
+
+	<div class='user-name'>	<%= @user.email %></div>
+	<div class='edit-form'>
+		<% if current_user.id == @user.id %>
+			<a href='/users/edit'>Edit</a>
+		<% end %>
+	</div>
+
+<h3>List of all Blogs of this user: </h3>
+<div class='blog-list'>
+	<% @user.posts.each_with_index do |b, index| %>
+		<div><%= index + 1 %></div>
+		<div>Title: <%= b.title %></div>
+		<div>Content: <%= b.content %></div>
+		<div>Date: <%= b.created_at.to_date %></div>
+		<br>
+	<% end %>
+</div>

@@ -1,0 +1,31 @@
+<h2>Post</h2>
+
+<% if current_user.id == @post.user.id %>
+	<div>Title:<a href='/posts/<%=@post.id %>/edit'>	<%= @post.title%></a></div>
+<% end %>
+
+<div>Content: <%= @post.content %></div>
+<div>author: <a href="/profile/<%= current_user.id %>"><%= @post.user.email %></a></div>
+
+
+
+
+
+<h3>Comment on this Post: </h3>
+
+<%= form_for @comment do |f| %>
+	<%= f.text_area :content %>
+	<%= hidden_field_tag :post_id, @post.id %>
+	<%= f.submit %>
+<% end %>
+
+<div class='comments'>
+	Comments: <% @post.comments.each do |p| %>
+		<div><a href="/comments/<%= p.id %>/edit"> <%= p.content %></a> | <%= p.user.email %></div>
+
+			<% end %>
+</div>
+
+
+
+
